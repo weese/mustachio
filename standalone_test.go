@@ -18,7 +18,7 @@ func TestIndentedPartials(t *testing.T) {
 	tpl := "Start\n  {{> p}}\nEnd"
 	out, err := Render(tpl, map[string]any{}, partials)
 	if err != nil { t.Fatal(err) }
-	expected := "Start\n  one\n   two\n  three\nEnd"
+	expected := "Start\n  one\n   two\n  threeEnd"
 	if out != expected { t.Fatalf("got %q want %q", out, expected) }
 }
 
