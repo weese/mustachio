@@ -1,3 +1,21 @@
+// Package mustachio provides a fast, spec-compliant Mustache template engine for Go.
+//
+// Mustachio implements the Mustache templating language specification
+// (https://mustache.github.io/mustache.5.html) with support for:
+//
+//   - Variables with HTML escaping: {{name}}
+//   - Unescaped variables: {{{name}}} and {{& name}}
+//   - Sections and inverted sections: {{#section}}...{{/section}}
+//   - Partials: {{> user}}
+//   - Set delimiters: {{=<% %>=}}
+//   - Lambda functions (optional spec feature)
+//   - Numeric indexing in dotted names
+//
+// Example:
+//
+//	template := "Hello {{name}}!"
+//	data := map[string]any{"name": "World"}
+//	result, err := mustachio.Render(template, data, nil)
 package mustachio
 
 import (
