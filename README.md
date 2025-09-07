@@ -1,6 +1,6 @@
 <div align="center">
-  <h1 align="center">mustachio (Go Mustache renderer)</h1>
-  <h3 align="center">A fast, readable Mustache template engine for Go</h3>
+  <h1 align="center">mustachio </h1>
+  <h3 align="center">⚡ A fast, readable Mustache template engine for Go</h3>
 </div>
 
 <div align="center">
@@ -22,7 +22,7 @@
 
 ## Features
 
-- Core Mustache
+- **Core Mustache**
   - Variables with HTML escaping: `{{name}}`
   - Unescaped variables: `{{{name}}}` and `{{& name}}`
   - Dotted names and context precedence: `{{a.b.c}}`
@@ -33,12 +33,12 @@
   - Set delimiters: `{{=<% %>=}} ... <%={{ }}=%}`
   - Standalone trimming (sections, inverted, partials, comments, set-delims)
   - CR and CRLF line ending handling in standalone detection
-- Extensions implemented
-  - Lambdas (optional per spec)
+- **Extensions implemented**
+  - λ Lambdas (optional per spec)
     - Variable lambdas: `func() string`
     - Section lambdas: `func(string) string` and `func(string, func(string) string) string` (render callback)
   - Numeric indexing in dotted names (e.g., `track.0.artist.#text`)
-- Testing
+- **Testing**
   - Unit tests for core features and lambdas
   - Spec runner executes JSON fixtures from `spec/specs/*.json`
 

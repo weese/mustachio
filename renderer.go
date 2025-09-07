@@ -194,16 +194,6 @@ func isFalsey(value any) bool {
 	return false
 }
 
-func toBool(value any) bool {
-	switch v := value.(type) {
-	case bool:
-		return v
-	case string:
-		return v != ""
-	}
-	return value != nil
-}
-
 func toString(v any) string {
 	switch s := v.(type) {
 	case string:
